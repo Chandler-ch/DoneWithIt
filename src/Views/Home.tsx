@@ -1,3 +1,4 @@
+import colors from "@/config/colors";
 import { Image, StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -18,6 +19,7 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: colors.black,
   },
   image: {
     width: "100%",
@@ -27,7 +29,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     marginTop: 20,
     left: 30,
-    backgroundColor: "#fc5c65",
+    backgroundColor: colors.primary,
     height: 50,
     width: 50,
   },
@@ -35,7 +37,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     marginTop: 20,
     right: 30,
-    backgroundColor: "#4ecdc4",
+    backgroundColor: colors.secondary,
     height: 50,
     width: 50,
   },

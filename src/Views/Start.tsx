@@ -1,3 +1,4 @@
+import colors from "@/config/colors";
 import { Image, ImageBackground, StyleSheet, View } from "react-native";
 
 function Start() {
@@ -30,11 +31,11 @@ const styles = StyleSheet.create({
   button1: {
     width: "100%",
     height: 75,
-    backgroundColor: "#fc5c65",
+    backgroundColor: colors.primary,
   },
   button2: {
     width: "100%",
-    backgroundColor: "#4ecdc4",
+    backgroundColor: colors.secondary,
     height: 75,
   },
 });

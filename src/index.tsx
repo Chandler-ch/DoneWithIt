@@ -1,4 +1,4 @@
-import Home from "@/Views/Home";
+import Home from "@/views/Home";
 import { StyleSheet } from "react-native";
 
 export default function Index() {
