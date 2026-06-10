@@ -1,13 +1,20 @@
 import { StyleSheet } from "react-native";
-import Start from "./views/Start";
+import Listings from "./views/Listings";
 
 export default function Index() {
-  return <Start />;
+  return (
+    <Listings
+      title="Red jacket for sale"
+      price="100€"
+      image={require("@/assets/jacket.jpg")}
+    />
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center",
+    backgroundColor: "#f8f4f4",
+    padding: 20,
+    paddingTop: 100,
   },
 });
