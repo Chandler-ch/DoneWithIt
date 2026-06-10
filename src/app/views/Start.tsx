@@ -1,4 +1,4 @@
-import colors from "@/config/colors";
+import colors from "@/app/config/colors";
 import { Image, ImageBackground, StyleSheet, View } from "react-native";
 
 function Start() {

@@ -1,8 +1,8 @@
-import Home from "@/views/Home";
 import { StyleSheet } from "react-native";
+import AppButton from "./components/AppButton";
 
 export default function Index() {
-  return <Home />;
+  return <AppButton />;
 }
 
 const styles = StyleSheet.create({
