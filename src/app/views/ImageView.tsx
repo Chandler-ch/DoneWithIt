@@ -1,11 +1,23 @@
 import colors from "@/app/config/colors";
-import { Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet } from "react-native";
+import { IconButton } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Home() {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.button1}></View>
+      <IconButton
+        iconColor={colors.white}
+        style={styles.button1}
+        icon="close"
+        size={30}
+      />
+      <IconButton
+        iconColor={colors.white}
+        style={styles.button2}
+        icon="trash-can-outline"
+        size={30}
+      />
 
       <Image
         resizeMode="contain"
@@ -28,17 +40,11 @@ const styles = StyleSheet.create({
   button1: {
     position: "absolute",
     marginTop: 20,
-    left: 30,
-    backgroundColor: colors.primary,
-    height: 50,
-    width: 50,
+    left: 20,
   },
   button2: {
     position: "absolute",
     marginTop: 20,
-    right: 30,
-    backgroundColor: colors.secondary,
-    height: 50,
-    width: 50,
+    right: 20,
   },
 });

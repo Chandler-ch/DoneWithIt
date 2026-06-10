@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import HomeView from "./views/HomeView";
+import HomeView from "./views/ImageView";
 
 export default function Index() {
   return <HomeView />;
