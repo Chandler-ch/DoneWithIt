@@ -1,17 +1,8 @@
-import { StyleSheet, View } from "react-native";
-import AppButton from "./components/AppButton";
+import { StyleSheet } from "react-native";
+import Start from "./views/Start";
 
 export default function Index() {
-  return (
-    <View style={styles.container}>
-      <AppButton
-        title="LOGIN"
-        onPress={() => {
-          console.log("hello");
-        }}
-      />
-    </View>
-  );
+  return <Start />;
 }
 
 const styles = StyleSheet.create({

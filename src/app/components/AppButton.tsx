@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 type AppButtonProps = {
   title?: string;
-  onPress: any;
+  onPress?: any;
   color?: keyof typeof colors;
 };
 
@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   button: {
+    marginVertical: 10,
     borderRadius: 25,
     padding: 15,
     width: "100%",
