@@ -1,14 +1,8 @@
 import { StyleSheet } from "react-native";
-import Listings from "./views/Listings";
+import HomeView from "./views/HomeView";
 
 export default function Index() {
-  return (
-    <Listings
-      title="Red jacket for sale"
-      price="100€"
-      image={require("@/assets/jacket.jpg")}
-    />
-  );
+  return <HomeView />;
 }
 
 const styles = StyleSheet.create({
