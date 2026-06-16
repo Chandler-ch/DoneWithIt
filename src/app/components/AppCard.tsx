@@ -6,11 +6,17 @@ type AppCardProps = {
   title: string;
   subTitle?: string;
   image: ImageSourcePropType;
+  style?: any;
 };
 
-export default function AppCard({ title, subTitle, image }: AppCardProps) {
+export default function AppCard({
+  title,
+  subTitle,
+  image,
+  style,
+}: AppCardProps) {
   return (
-    <View style={styles.card}>
+    <View style={[styles.card, style]}>
       <Image style={styles.image} source={image} />
       <View style={styles.textContainer}>
         <AppText style={styles.title}>{title}</AppText>

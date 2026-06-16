@@ -1,8 +1,8 @@
 import { StyleSheet } from "react-native";
-import MyAccountView from "./views/MyAccountView";
+import HomeView from "./views/HomeView";
 
 export default function Index() {
-  return <MyAccountView />;
+  return <HomeView />;
 }
 
 const styles = StyleSheet.create({
