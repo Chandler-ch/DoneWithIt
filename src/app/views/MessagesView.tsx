@@ -27,6 +27,9 @@ export default function MessagesView() {
           title={item.title}
           subtitle={item.description}
           image={item.image}
+          onPress={() => {
+            console.log("selected", item.title);
+          }}
         />
       )}
       ItemSeparatorComponent={Seperator}
