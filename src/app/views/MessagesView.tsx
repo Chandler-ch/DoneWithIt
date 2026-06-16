@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { FlatList } from "react-native";
-import Profile from "../components/Profile";
+import ListItem from "../components/ListItem/ListItem";
+import ListItemDeleteAction from "../components/ListItem/ListItemDeleteAction";
 import Seperator from "../components/Seperator";
 
-const messages = [
+const initialMessages = [
   {
     id: 1,
     title: "T1",
@@ -18,18 +20,30 @@ const messages = [
 ];
 
 export default function MessagesView() {
+  const [messages, setMessages] = useState<Array<any>>(initialMessages);
+
+  // THIS IS THE PROBLEM!
+  const handleDelete = (message: any) => {
+    console.log(message);
+    setMessages(messages.filter((m) => m.id !== message.id));
+    console.log(messages);
+  };
+
   return (
     <FlatList
       data={messages}
       keyExtractor={(message) => message.id.toString()}
       renderItem={({ item }) => (
-        <Profile
+        <ListItem
           title={item.title}
           subtitle={item.description}
           image={item.image}
           onPress={() => {
             console.log("selected", item.title);
           }}
+          swipeRight={() => (
+            <ListItemDeleteAction onPress={() => handleDelete(item)} />
+          )}
         />
       )}
       ItemSeparatorComponent={Seperator}

@@ -1,6 +1,6 @@
 import { Image, ImageSourcePropType, StyleSheet, View } from "react-native";
 import AppText from "../components/AppText";
-import Profile from "../components/Profile";
+import ListItem from "../components/ListItem/ListItem";
 import colors from "../config/colors";
 
 type ListingsProps = {
@@ -18,7 +18,7 @@ export default function Listings({ title, price, image }: ListingsProps) {
         <AppText style={styles.price}>{price}</AppText>
       </View>
       <View style={styles.userContainer}></View>
-      <Profile
+      <ListItem
         title="Amelia Chandler"
         subtitle="Entwicklerin"
         image={require("@/assets/AmeliaPB.jpg")}
