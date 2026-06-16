@@ -21,12 +21,10 @@ const initialMessages = [
 
 export default function MessagesView() {
   const [messages, setMessages] = useState<Array<any>>(initialMessages);
+  const [refreshing, setRefreshing] = useState<boolean>(false);
 
-  // THIS IS THE PROBLEM!
   const handleDelete = (message: any) => {
-    console.log(message);
     setMessages(messages.filter((m) => m.id !== message.id));
-    console.log(messages);
   };
 
   return (
@@ -47,6 +45,10 @@ export default function MessagesView() {
         />
       )}
       ItemSeparatorComponent={Seperator}
+      refreshing={refreshing}
+      onRefresh={() => {
+        setMessages(initialMessages);
+      }}
     ></FlatList>
   );
 }
