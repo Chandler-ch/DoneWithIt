@@ -1,8 +1,8 @@
 import { StyleSheet } from "react-native";
-import HomeView from "./views/ImageView";
+import MessagesView from "./views/MessagesView";
 
 export default function Index() {
-  return <HomeView />;
+  return <MessagesView />;
 }
 
 const styles = StyleSheet.create({
