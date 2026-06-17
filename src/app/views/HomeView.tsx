@@ -1,23 +1,37 @@
-import { StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet } from "react-native";
 import AppCard from "../components/AppCard";
 import colors from "../config/colors";
 
 export default function HomeView() {
+  const initialListings = [
+    {
+      id: 1,
+      title: "Red Jacket for sale",
+      subTitle: "100€",
+      image: require("@/assets/jacket.jpg"),
+    },
+    {
+      id: 2,
+      title: "Couch in great condition",
+      subTitle: "1000€",
+      image: require("@/assets/couch.jpg"),
+    },
+  ];
+
   return (
-    <View style={styles.container}>
-      <AppCard
-        title="Red Jacket for sale"
-        subTitle="100€"
-        image={require("@/assets/jacket.jpg")}
-        style={styles.card}
-      />
-      <AppCard
-        title="Couch in great condition"
-        subTitle="1000€"
-        image={require("@/assets/couch.jpg")}
-        style={styles.card}
-      />
-    </View>
+    <FlatList
+      style={styles.container}
+      data={initialListings}
+      keyExtractor={(listing) => listing.id.toString()}
+      renderItem={({ item }) => (
+        <AppCard
+          title={item.title}
+          subTitle={item.subTitle}
+          image={item.image}
+          style={styles.card}
+        />
+      )}
+    />
   );
 }
 
