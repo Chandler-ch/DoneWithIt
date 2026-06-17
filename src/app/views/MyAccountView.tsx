@@ -1,5 +1,5 @@
 import { StyleSheet, View } from "react-native";
-import ListIconPicture from "../components/ListItem/ListIconPicture";
+import AppIcon from "../components/AppIcon";
 import ListItem from "../components/ListItem/ListItem";
 import colors from "../config/colors";
 
@@ -16,20 +16,18 @@ export default function MyAccountView() {
       <View>
         <ListItem
           title="My Listings"
-          LeftSymbol={<ListIconPicture icon="format-list-bulleted" />}
+          LeftSymbol={<AppIcon icon="format-list-bulleted" />}
         />
         <ListItem
           title="My Messages"
-          LeftSymbol={
-            <ListIconPicture icon="email" backgroundColor="secondary" />
-          }
+          LeftSymbol={<AppIcon icon="email" backgroundColor="secondary" />}
         />
       </View>
 
       <ListItem
         style={styles.logout}
         title="Logout"
-        LeftSymbol={<ListIconPicture icon="logout" backgroundColor="warning" />}
+        LeftSymbol={<AppIcon icon="logout" backgroundColor="warning" />}
       />
     </View>
   );
