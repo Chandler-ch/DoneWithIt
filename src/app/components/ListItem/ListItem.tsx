@@ -16,7 +16,7 @@ type ListItemProps = {
   onPress?: any;
   swipeRight?: any;
   style?: any;
-  leftSymbol?: any;
+  LeftSymbol?: any;
 };
 
 export default function ListItem({
@@ -26,7 +26,7 @@ export default function ListItem({
   onPress,
   swipeRight,
   style,
-  leftSymbol,
+  LeftSymbol,
 }: ListItemProps) {
   return (
     <Swipeable renderRightActions={swipeRight}>
@@ -35,12 +35,12 @@ export default function ListItem({
         onPress={onPress}
       >
         <View style={[styles.container, style]}>
-          {leftSymbol ? (
-            <View style={styles.symbol}>{leftSymbol}</View>
+          {LeftSymbol ? (
+            <View>{LeftSymbol}</View>
           ) : (
             <Image style={styles.image} source={image}></Image>
           )}
-          <View>
+          <View style={styles.textContainer}>
             <AppText style={styles.title}>{title}</AppText>
             <AppText style={styles.subtitle}>{subtitle}</AppText>
           </View>
@@ -57,6 +57,9 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     marginTop: 1,
   },
+  textContainer: {
+    marginLeft: 10,
+  },
   subtitle: {
     color: colors.medium,
   },
@@ -67,10 +70,6 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     width: 70,
     height: 70,
-    marginRight: 10,
-  },
-  symbol: {
-    marginRight: 10,
   },
   pressable: {
     backgroundColor: colors.light,

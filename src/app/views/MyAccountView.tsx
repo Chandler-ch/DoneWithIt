@@ -16,11 +16,11 @@ export default function MyAccountView() {
       <View>
         <ListItem
           title="My Listings"
-          leftSymbol={<ListIconPicture icon="format-list-bulleted" />}
+          LeftSymbol={<ListIconPicture icon="format-list-bulleted" />}
         />
         <ListItem
           title="My Messages"
-          leftSymbol={
+          LeftSymbol={
             <ListIconPicture icon="email" backgroundColor="secondary" />
           }
         />
@@ -29,7 +29,7 @@ export default function MyAccountView() {
       <ListItem
         style={styles.logout}
         title="Logout"
-        leftSymbol={<ListIconPicture icon="logout" backgroundColor="warning" />}
+        LeftSymbol={<ListIconPicture icon="logout" backgroundColor="warning" />}
       />
     </View>
   );
