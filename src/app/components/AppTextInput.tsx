@@ -31,7 +31,8 @@ export default function AppTextInput({ placeholder, icon }: AppTextInputProps) {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 15,
+    margin: 5,
+    marginVertical: 10,
     backgroundColor: colors.light,
     borderRadius: 100,
     height: 60,

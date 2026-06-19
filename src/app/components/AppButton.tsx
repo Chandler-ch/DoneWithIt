@@ -5,16 +5,18 @@ type AppButtonProps = {
   title?: string;
   onPress?: any;
   color?: keyof typeof colors;
+  style?: any;
 };
 
 export default function AppButton({
   title,
   onPress,
   color = "primary",
+  style,
 }: AppButtonProps) {
   return (
     <TouchableOpacity
-      style={[styles.button, { backgroundColor: colors[color] }]}
+      style={[styles.button, { backgroundColor: colors[color] }, style]}
       onPress={onPress}
     >
       <View>
@@ -32,10 +34,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   button: {
+    margin: 5,
     marginVertical: 10,
     borderRadius: 25,
     padding: 15,
-    width: "100%",
     justifyContent: "center",
     alignItems: "center",
   },

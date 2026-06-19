@@ -15,8 +15,8 @@ export default function Login() {
       <View style={styles.formContainer}>
         <AppTextInput icon="email" placeholder="Email" />
         <AppTextInput icon="lock" placeholder="Password" />
+        <AppButton title="Login" />
       </View>
-      <AppButton title="Login" />
     </>
   );
 }
@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   formContainer: {
-    margin: 5,
     marginVertical: 20,
   },
 });
