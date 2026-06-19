@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { StyleSheet, View } from "react-native";
 import AppTextInput from "./components/AppTextInput";
-import AppPicker from "./components/Picker/AppPicker";
+import AppPicker from "./components/picker/AppPicker";
 
 const initialCategories = [
   { label: "Furniture", value: 1 },

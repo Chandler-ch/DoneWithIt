@@ -1,6 +1,6 @@
 import { Image, ImageSourcePropType, StyleSheet, View } from "react-native";
 import AppText from "../components/AppText";
-import ListItem from "../components/ListItem/ListItem";
+import ListItem from "../components/listItem/ListItem";
 import colors from "../config/colors";
 
 type ListingsProps = {
