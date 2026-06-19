@@ -6,7 +6,7 @@ import FormScreen from "../../components/FormScreen";
 export default function AddItem(props) {
   return (
     <FormScreen>
-      <AppTextInput icon="email" placeholder="Title" />
+      <AppTextInput placeholder="Title" />
       <AppTextInput placeholder="Price" />
       <AppPicker placeholder="Category" />
       <AppTextInput placeholder="Description" />
