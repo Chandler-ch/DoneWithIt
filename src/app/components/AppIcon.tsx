@@ -7,6 +7,7 @@ type ListIconPictureProps = {
   size?: number;
   backgroundColor?: keyof typeof colors;
   style?: any;
+  iconColor?: string;
 };
 
 export default function AppIcon({
@@ -14,6 +15,7 @@ export default function AppIcon({
   size = 20,
   backgroundColor = "primary",
   style,
+  iconColor = "#000",
 }: ListIconPictureProps) {
   return (
     <View
@@ -23,7 +25,7 @@ export default function AppIcon({
         { backgroundColor: colors[backgroundColor] },
       ]}
     >
-      <Icon size={size} source={icon}></Icon>
+      <Icon color={iconColor} size={size} source={icon}></Icon>
     </View>
   );
 }

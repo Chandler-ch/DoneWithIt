@@ -1,26 +1,10 @@
-import { useState } from "react";
 import { StyleSheet, View } from "react-native";
-import AppTextInput from "./components/AppTextInput";
-import AppPicker from "./components/picker/AppPicker";
-
-const initialCategories = [
-  { label: "Furniture", value: 1 },
-  { label: "Clothing", value: 2 },
-  { label: "Cameras", value: 3 },
-];
+import Login from "./views/forms/LoginView";
 
 export default function Index() {
-  const [category, setCategory] = useState<object>(initialCategories[0]);
   return (
     <View>
-      <AppPicker
-        selectedItem={category}
-        onSelectItem={(item: any) => setCategory(item)}
-        items={initialCategories}
-        icon="email"
-        placeholder="Category"
-      />
-      <AppTextInput icon="email" placeholder="email" />
+      <Login />
     </View>
   );
 }

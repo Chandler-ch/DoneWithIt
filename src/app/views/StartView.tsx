@@ -1,5 +1,6 @@
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import AppButton from "../components/AppButton";
+import defaultStyles from "../config/defaultStyles";
 
 function Start() {
   return (
@@ -9,7 +10,10 @@ function Start() {
       source={require("@/assets/background.jpg")}
     >
       <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={require("@/assets/logo-red.png")} />
+        <Image
+          style={defaultStyles.logoSize}
+          source={require("@/assets/logo-red.png")}
+        />
         <Text style={styles.text}>Sell What You Don't Need</Text>
       </View>
 
@@ -36,10 +40,6 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     justifyContent: "space-between",
-  },
-  logo: {
-    width: 100,
-    height: 100,
   },
   buttonContainer: {
     width: "100%",

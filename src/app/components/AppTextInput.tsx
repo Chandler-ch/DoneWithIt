@@ -12,7 +12,13 @@ export default function AppTextInput({ placeholder, icon }: AppTextInputProps) {
   return (
     <View style={styles.container}>
       {icon && (
-        <AppIcon style={styles.icon} icon={icon} backgroundColor="light" />
+        <AppIcon
+          style={styles.icon}
+          icon={icon}
+          size={25}
+          backgroundColor="light"
+          iconColor={colors.medium}
+        />
       )}
       <TextInput
         placeholder={placeholder}
@@ -25,13 +31,14 @@ export default function AppTextInput({ placeholder, icon }: AppTextInputProps) {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 10,
+    marginTop: 15,
     backgroundColor: colors.light,
     borderRadius: 100,
-    height: 50,
+    height: 60,
     flexDirection: "row",
   },
   icon: {
+    marginTop: 10,
     margin: 5,
   },
   input: {
@@ -39,6 +46,5 @@ const styles = StyleSheet.create({
     outlineStyle: "none",
     fontSize: 18,
     width: "100%",
-    marginLeft: 10,
   },
 });
