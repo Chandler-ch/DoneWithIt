@@ -40,12 +40,14 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginTop: 10,
-    margin: 5,
+    marginLeft: 5,
+    marginRight: -10,
   },
   input: {
     color: colors.dark,
     outlineStyle: "none",
     fontSize: 18,
     width: "100%",
+    marginLeft: 10,
   },
 });

@@ -1,10 +1,10 @@
 import { StyleSheet, View } from "react-native";
-import RegisterView from "./views/forms/RegisterView";
+import AddItem from "./views/forms/AddItem";
 
 export default function Index() {
   return (
     <View>
-      <RegisterView />
+      <AddItem />
     </View>
   );
 }

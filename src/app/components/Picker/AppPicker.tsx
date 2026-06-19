@@ -30,10 +30,15 @@ export default function AppPicker({
           {icon && (
             <AppIcon style={styles.icon} icon={icon} backgroundColor="light" />
           )}
-          <AppText style={[styles.text, defaultStyles.text]}>
+          <AppText style={[defaultStyles.text, styles.text]}>
             {selectedItem ? selectedItem.label : placeholder}
           </AppText>
-          <AppIcon backgroundColor="light" icon="chevron-down" />
+          <AppIcon
+            backgroundColor="light"
+            iconColor={colors.medium}
+            icon="chevron-down"
+            style={styles.iconOpening}
+          />
         </View>
       </Pressable>
       <Modal visible={modalVisible}>
@@ -59,15 +64,20 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     backgroundColor: colors.light,
     borderRadius: 100,
-    height: 50,
+    height: 60,
     flexDirection: "row",
+    margin: 5,
   },
   icon: {
     margin: 5,
   },
   text: {
     margin: 10,
-    marginTop: 13,
+    marginTop: 17,
     flex: 1,
+    color: colors.medium,
+  },
+  iconOpening: {
+    marginTop: 5,
   },
 });
