@@ -14,8 +14,22 @@ export default function Login() {
         />
       </View>
       <View style={styles.formContainer}>
-        <AppTextInput icon="email" placeholder="Email" />
-        <AppTextInput icon="lock" placeholder="Password" />
+        <AppTextInput
+          autoCapitalize="none"
+          autoCorrect={false}
+          keyboardType="email-address"
+          icon="email"
+          placeholder="Email"
+          textContentType="emailAddress"
+        />
+        <AppTextInput
+          autoCapitalize="none"
+          autoCorrect={false}
+          textContentType="password"
+          icon="lock"
+          placeholder="Password"
+          secureTextEntry
+        />
         <AppButton title="Login" />
       </View>
     </FormScreen>

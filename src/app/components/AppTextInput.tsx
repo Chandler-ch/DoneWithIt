@@ -1,4 +1,4 @@
-import { StyleSheet, TextInput, View } from "react-native";
+import { StyleSheet, TextInput, TextInputProps, View } from "react-native";
 import colors from "../config/colors";
 import defaultStyles from "../config/defaultStyles";
 import AppIcon from "./AppIcon";
@@ -6,9 +6,13 @@ import AppIcon from "./AppIcon";
 type AppTextInputProps = {
   placeholder?: string;
   icon?: string;
-};
+} & TextInputProps;
 
-export default function AppTextInput({ placeholder, icon }: AppTextInputProps) {
+export default function AppTextInput({
+  placeholder,
+  icon,
+  ...otherProps
+}: AppTextInputProps) {
   return (
     <View style={styles.container}>
       {icon && (
@@ -24,6 +28,7 @@ export default function AppTextInput({ placeholder, icon }: AppTextInputProps) {
         placeholder={placeholder}
         placeholderTextColor={colors.medium}
         style={[styles.input, defaultStyles.text]}
+        {...otherProps}
       ></TextInput>
     </View>
   );
