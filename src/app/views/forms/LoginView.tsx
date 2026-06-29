@@ -27,28 +27,36 @@ export default function LoginView() {
           onSubmit={(values) => console.log(values)}
           validationSchema={validationSchema}
         >
-          {({ handleChange, handleSubmit, errors }) => (
+          {({
+            handleChange,
+            handleSubmit,
+            errors,
+            setFieldTouched,
+            touched,
+          }) => (
             <>
               <AppTextInput
                 autoCapitalize="none"
                 autoCorrect={false}
                 keyboardType="email-address"
                 icon="email"
+                onBlur={() => setFieldTouched("email")}
                 onChangeText={handleChange("email")}
                 placeholder="Email"
                 textContentType="emailAddress"
               />
-              <ErrorMessage error={errors.email} />
+              {touched.email && <ErrorMessage error={errors.email} />}
               <AppTextInput
                 autoCapitalize="none"
                 autoCorrect={false}
                 textContentType="password"
                 icon="lock"
+                onBlur={() => setFieldTouched("password")}
                 onChangeText={handleChange("password")}
                 placeholder="Password"
                 secureTextEntry
               />
-              <ErrorMessage error={errors.password} />
+              {touched.password && <ErrorMessage error={errors.password} />}
               <AppButton title="Login" onPress={handleSubmit} />
             </>
           )}
