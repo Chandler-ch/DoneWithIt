@@ -1,6 +1,6 @@
 import AppButton from "@/app/components/AppButton";
-import AppText from "@/app/components/AppText";
 import AppTextInput from "@/app/components/AppTextInput";
+import ErrorMessage from "@/app/components/ErrorMessage";
 import defaultStyles from "@/app/config/defaultStyles";
 import { Formik } from "formik";
 import { Image, StyleSheet, View } from "react-native";
@@ -38,7 +38,7 @@ export default function LoginView() {
                 placeholder="Email"
                 textContentType="emailAddress"
               />
-              <AppText style={{ color: "red" }}>{errors.email}</AppText>
+              <ErrorMessage error={errors.email} />
               <AppTextInput
                 autoCapitalize="none"
                 autoCorrect={false}
@@ -48,8 +48,7 @@ export default function LoginView() {
                 placeholder="Password"
                 secureTextEntry
               />
-
-              <AppText style={{ color: "red" }}>{errors.password}</AppText>
+              <ErrorMessage error={errors.password} />
               <AppButton title="Login" onPress={handleSubmit} />
             </>
           )}
