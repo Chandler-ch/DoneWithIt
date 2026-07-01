@@ -9,7 +9,7 @@ import {
 
 export type AppButtonProps = {
   title?: string;
-  onPress?: () => void;
+  onPress?: any;
   color?: keyof typeof colors;
   style?: any;
 } & ButtonProps;
