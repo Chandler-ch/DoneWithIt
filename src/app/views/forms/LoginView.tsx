@@ -1,5 +1,5 @@
-import AppButton from "@/app/components/AppButton";
 import AppFormField from "@/app/components/AppFormField";
+import SubmitButton from "@/app/components/SubmitButton";
 import defaultStyles from "@/app/config/defaultStyles";
 import { Formik } from "formik";
 import { Image, StyleSheet, View } from "react-native";
@@ -26,13 +26,7 @@ export default function LoginView() {
           onSubmit={(values) => console.log(values)}
           validationSchema={validationSchema}
         >
-          {({
-            handleChange,
-            handleSubmit,
-            errors,
-            setFieldTouched,
-            touched,
-          }) => (
+          {() => (
             <>
               <AppFormField
                 autoCapitalize="none"
@@ -52,7 +46,7 @@ export default function LoginView() {
                 placeholder="Password"
                 secureTextEntry
               />
-              <AppButton title="Login" onPress={handleSubmit} />
+              <SubmitButton title="login" />
             </>
           )}
         </Formik>

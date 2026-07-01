@@ -1,7 +1,7 @@
 import colors from "@/app/config/colors";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-type AppButtonProps = {
+export type AppButtonProps = {
   title?: string;
   onPress?: any;
   color?: keyof typeof colors;
