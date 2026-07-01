@@ -3,7 +3,7 @@ import colors from "../config/colors";
 import defaultStyles from "../config/defaultStyles";
 import AppIcon from "./AppIcon";
 
-type AppTextInputProps = {
+export type AppTextInputProps = {
   placeholder?: string;
   icon?: string;
 } & TextInputProps;

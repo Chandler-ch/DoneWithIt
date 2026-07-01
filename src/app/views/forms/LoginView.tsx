@@ -1,6 +1,5 @@
 import AppButton from "@/app/components/AppButton";
-import AppTextInput from "@/app/components/AppTextInput";
-import ErrorMessage from "@/app/components/ErrorMessage";
+import AppFormField from "@/app/components/AppFormField";
 import defaultStyles from "@/app/config/defaultStyles";
 import { Formik } from "formik";
 import { Image, StyleSheet, View } from "react-native";
@@ -35,28 +34,24 @@ export default function LoginView() {
             touched,
           }) => (
             <>
-              <AppTextInput
+              <AppFormField
                 autoCapitalize="none"
                 autoCorrect={false}
                 keyboardType="email-address"
                 icon="email"
-                onBlur={() => setFieldTouched("email")}
-                onChangeText={handleChange("email")}
                 placeholder="Email"
+                name="email"
                 textContentType="emailAddress"
               />
-              {touched.email && <ErrorMessage error={errors.email} />}
-              <AppTextInput
+              <AppFormField
                 autoCapitalize="none"
                 autoCorrect={false}
                 textContentType="password"
                 icon="lock"
-                onBlur={() => setFieldTouched("password")}
-                onChangeText={handleChange("password")}
+                name="password"
                 placeholder="Password"
                 secureTextEntry
               />
-              {touched.password && <ErrorMessage error={errors.password} />}
               <AppButton title="Login" onPress={handleSubmit} />
             </>
           )}
