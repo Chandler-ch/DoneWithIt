@@ -11,6 +11,11 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required().min(4).label("Password"),
 });
 
+export interface LoginValues {
+  email: string,
+  password: string
+}
+
 export default function LoginView() {
   return (
     <FormScreen>
@@ -21,7 +26,7 @@ export default function LoginView() {
         />
       </View>
       <View style={styles.formContainer}>
-        <Formik
+        <Formik<LoginValues>
           initialValues={{ email: "", password: "" }}
           onSubmit={(values) => console.log(values)}
           validationSchema={validationSchema}
