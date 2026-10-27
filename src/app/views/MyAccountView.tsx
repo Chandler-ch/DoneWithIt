@@ -1,6 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import AppIcon from "../components/AppIcon";
-import ListItem from "../components/listItem/ListItem";
+import ListItem from "../components/ListItem/ListItem";
 import colors from "../config/colors";
 
 export default function MyAccountView() {
