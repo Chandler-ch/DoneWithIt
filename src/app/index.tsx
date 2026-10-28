@@ -1,11 +1,11 @@
 import { StyleSheet, View } from "react-native";
-import LoginView from "./views/forms/LoginView";
+import RegisterView from "./views/forms/RegisterView";
 
 export default function Index() {
   return (
     <View>
       <div style={styles.container}>
-        <LoginView />
+        <RegisterView />
       </div>
     </View>
   );

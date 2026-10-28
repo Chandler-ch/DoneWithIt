@@ -1,17 +1,15 @@
 import { useFormikContext } from "formik";
-import { LoginValues } from "../../views/forms/LoginView";
 import AppTextInput, { AppTextInputProps } from "../AppTextInput";
 import ErrorMessage from "../forms/ErrorMessage";
 
-type AppFormFieldProps = {
-  name: keyof LoginValues & string;
-} & AppTextInputProps;
-export default function AppFormField({
+export default function AppFormField<initialType>({
   name,
   ...otherProps
-}: AppFormFieldProps) {
+}: {
+  name: keyof initialType & string;
+} & AppTextInputProps) {
   const { setFieldTouched, handleChange, errors, touched } =
-    useFormikContext<LoginValues>();
+    useFormikContext<initialType>();
   return (
     <>
       <AppTextInput

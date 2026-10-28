@@ -11,7 +11,7 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required().min(4).label("Password"),
 });
 
-export interface LoginValues {
+interface LoginValues {
   email: string;
   password: string;
 }
@@ -31,7 +31,7 @@ export default function LoginView() {
           onSubmit={(values) => console.log(values)}
           validationSchema={validationSchema}
         >
-          <AppFormField
+          <AppFormField<LoginValues>
             autoCapitalize="none"
             autoCorrect={false}
             keyboardType="email-address"
@@ -40,7 +40,7 @@ export default function LoginView() {
             name="email"
             textContentType="emailAddress"
           />
-          <AppFormField
+          <AppFormField<LoginValues>
             autoCapitalize="none"
             autoCorrect={false}
             textContentType="password"
