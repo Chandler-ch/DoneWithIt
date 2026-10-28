@@ -27,6 +27,7 @@ export default function RegisterView() {
           validationSchema={validationSchema}
         >
           <AppFormField<RegisterValues>
+            autoCapitalize="words"
             icon="account"
             placeholder="Name"
             name="name"
@@ -58,11 +59,6 @@ export default function RegisterView() {
 }
 
 const styles = StyleSheet.create({
-  logoContainer: {
-    flex: 1,
-    marginTop: 70,
-    alignItems: "center",
-  },
   formContainer: {
     marginVertical: 20,
   },
