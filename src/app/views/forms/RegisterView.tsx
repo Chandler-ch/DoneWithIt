@@ -50,7 +50,7 @@ export default function RegisterView() {
             placeholder="Password"
             secureTextEntry
           />
-          <SubmitButton title="login" />
+          <SubmitButton title="Register" />
         </AppForm>
       </View>
     </FormScreen>
