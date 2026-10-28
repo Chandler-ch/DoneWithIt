@@ -1,7 +1,7 @@
+import AppForm from "@/app/components/AppForm";
 import AppFormField from "@/app/components/AppFormField";
 import SubmitButton from "@/app/components/SubmitButton";
 import defaultStyles from "@/app/config/defaultStyles";
-import { Formik } from "formik";
 import { Image, StyleSheet, View } from "react-native";
 import * as Yup from "yup";
 import FormScreen from "../../components/FormScreen";
@@ -12,8 +12,8 @@ const validationSchema = Yup.object().shape({
 });
 
 export interface LoginValues {
-  email: string,
-  password: string
+  email: string;
+  password: string;
 }
 
 export default function LoginView() {
@@ -26,35 +26,31 @@ export default function LoginView() {
         />
       </View>
       <View style={styles.formContainer}>
-        <Formik<LoginValues>
+        <AppForm<LoginValues>
           initialValues={{ email: "", password: "" }}
           onSubmit={(values) => console.log(values)}
           validationSchema={validationSchema}
         >
-          {() => (
-            <>
-              <AppFormField
-                autoCapitalize="none"
-                autoCorrect={false}
-                keyboardType="email-address"
-                icon="email"
-                placeholder="Email"
-                name="email"
-                textContentType="emailAddress"
-              />
-              <AppFormField
-                autoCapitalize="none"
-                autoCorrect={false}
-                textContentType="password"
-                icon="lock"
-                name="password"
-                placeholder="Password"
-                secureTextEntry
-              />
-              <SubmitButton title="login" />
-            </>
-          )}
-        </Formik>
+          <AppFormField
+            autoCapitalize="none"
+            autoCorrect={false}
+            keyboardType="email-address"
+            icon="email"
+            placeholder="Email"
+            name="email"
+            textContentType="emailAddress"
+          />
+          <AppFormField
+            autoCapitalize="none"
+            autoCorrect={false}
+            textContentType="password"
+            icon="lock"
+            name="password"
+            placeholder="Password"
+            secureTextEntry
+          />
+          <SubmitButton title="login" />
+        </AppForm>
       </View>
     </FormScreen>
   );
