@@ -1,7 +1,7 @@
 import { useFormikContext } from "formik";
 import { LoginValues } from "../../views/forms/LoginView";
 import AppTextInput, { AppTextInputProps } from "../AppTextInput";
-import ErrorMessage from "../ErrorMessage";
+import ErrorMessage from "../forms/ErrorMessage";
 
 type AppFormFieldProps = {
   name: keyof LoginValues & string;
