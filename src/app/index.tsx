@@ -4,7 +4,9 @@ import LoginView from "./views/forms/LoginView";
 export default function Index() {
   return (
     <View>
-      <LoginView />
+      <div style={styles.container}>
+        <LoginView />
+      </div>
     </View>
   );
 }
@@ -12,7 +14,6 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#f8f4f4",
-    padding: 20,
-    paddingTop: 100,
+    padding: 3,
   },
 });
