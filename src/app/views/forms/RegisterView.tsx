@@ -1,6 +1,6 @@
 import AppButton from "@/app/components/AppButton";
 import AppTextInput from "@/app/components/AppTextInput";
-import FormScreen from "../../components/FormScreen";
+import FormScreen from "../../components/forms/FormScreen";
 
 export default function RegisterView() {
   return (

@@ -1,7 +1,7 @@
 import { useFormikContext } from "formik";
-import { LoginValues } from "../views/forms/LoginView";
-import AppTextInput, { AppTextInputProps } from "./AppTextInput";
-import ErrorMessage from "./ErrorMessage";
+import { LoginValues } from "../../views/forms/LoginView";
+import AppTextInput, { AppTextInputProps } from "../AppTextInput";
+import ErrorMessage from "../ErrorMessage";
 
 type AppFormFieldProps = {
   name: keyof LoginValues & string;
@@ -10,7 +10,8 @@ export default function AppFormField({
   name,
   ...otherProps
 }: AppFormFieldProps) {
-  const { setFieldTouched, handleChange, errors, touched } = useFormikContext<LoginValues>();
+  const { setFieldTouched, handleChange, errors, touched } =
+    useFormikContext<LoginValues>();
   return (
     <>
       <AppTextInput
