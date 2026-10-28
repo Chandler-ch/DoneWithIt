@@ -1,13 +1,6 @@
 import { Formik, FormikConfig } from "formik";
 import { ObjectSchema } from "yup";
 
-interface AppFormProps {
-  initialValues: object;
-  onSubmit: any;
-  validationSchema: ObjectSchema<{}>;
-  children: any;
-}
-
 function AppForm<initialValuesType>({
   initialValues,
   onSubmit,
