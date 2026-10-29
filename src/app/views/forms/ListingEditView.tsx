@@ -1,6 +1,7 @@
 import AppForm from "@/app/components/forms/AppForm";
 import AppFormField from "@/app/components/forms/AppFormField";
 import SubmitButton from "@/app/components/forms/SubmitButton";
+import AppFormPicker from "@/app/components/picker/AppFormPicker";
 import { StyleSheet, View } from "react-native";
 import * as Yup from "yup";
 import FormScreen from "../../components/forms/FormScreen";
@@ -41,7 +42,13 @@ export default function RegisterView() {
             placeholder="Price"
             name="price"
           />
-          {/* Category */}
+          <AppFormPicker<ListingEditValues>
+            name="category"
+            placeholder="Category"
+            onSelectItem={(value: string) => console.log(value)}
+            items={null}
+            selectedItem={null}
+          />
           <AppFormField<ListingEditValues>
             autoCapitalize="none"
             autoCorrect={false}

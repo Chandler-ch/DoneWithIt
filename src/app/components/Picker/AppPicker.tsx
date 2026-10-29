@@ -6,7 +6,7 @@ import AppIcon from "../AppIcon";
 import AppText from "../AppText";
 import PickerItem from "./PickerItem";
 
-type AppPickerInputProps = {
+export type AppPickerInputProps = {
   placeholder?: string;
   icon?: string;
   items: any;
